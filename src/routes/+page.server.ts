@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { parse } from 'rss-to-json';
+import parse from 'rss-to-json';
 
 export const load = (async () => {
   return {
