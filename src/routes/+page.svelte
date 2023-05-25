@@ -33,7 +33,7 @@
 {#each data.rss.items as episode}
 <div class="episode">
   <h2>{episode.title}</h2>
-  <p><a href="{episode.enclosures[0].url}">Listen!</a></p>
+  <p class="play"><a href="{episode.enclosures[0].url}">▶</a></p>
   <p class="description">{@html stripAcastBlurb(episode.description)}</p>
 </div>
 {/each}
