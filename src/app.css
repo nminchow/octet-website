@@ -1,0 +1,38 @@
+h1, h2, h3, h4 {
+  font-family: 'Playfair', serif;
+}
+
+h1 {
+  font-size: 4em;
+  margin-block-start: .3em;
+}
+
+h2 {
+  margin-top: .5em;
+}
+
+p {
+  font-family: 'Wix Madefor Display', sans-serif;
+}
+
+.content {
+  max-width: 49rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.episode p {
+  margin-bottom: 0;
+}
+
+.description p:last-of-type {
+  margin-bottom: revert;
+}
+
+.episode ul {
+  margin-top: 0;
+}
+
+.episode br {
+  display: none;
+}
