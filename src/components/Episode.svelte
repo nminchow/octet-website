@@ -7,6 +7,7 @@
 </script>
 
 <div class="episode">
+  {#if episode}
   <h2>{episode.title}</h2>
   <p class="play"><a href="{episode.enclosures[0].url}">▶</a></p>
   <div class="description">
@@ -20,4 +21,5 @@
     {/if}
   </div>
   <hr/>
+  {/if}
 </div>
