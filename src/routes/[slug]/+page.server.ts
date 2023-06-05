@@ -13,8 +13,10 @@ export const load = (async ({ params }) => {
     });
   }
 
+  const index = result.items.length - slug;
+
   return {
-    episode: result?.items[slug - 1]
+    episode: result?.items[index]
     // data: await parse('https://blog.ethereum.org/feed.xml')
     // data: await parse('https://feeds.simplecast.com/6WD3bDj7')
   }

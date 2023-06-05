@@ -13,7 +13,7 @@
     {@html stripAcastBlurb(episode.description, browser, 3)}
     {#if index !== null}
     <p>
-      <a href={`/${index + 1}`}>
+      <a href={`/${index}`}>
         Direct Link
       </a>
     </p>

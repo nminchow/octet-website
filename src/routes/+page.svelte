@@ -16,12 +16,12 @@
 <h3>
   <a href="https://open.spotify.com/show/3Qz1V5AzM4FYfz75SdEXfq">Spotify</a>,
   <a href="https://podcasts.apple.com/us/podcast/octet/id1689155893">iTunes</a>,
-  <a>Google Podcasts</a>
+  <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3Mub2N0ZXRwb2QuY29tLw"> Google Podcasts</a>
 </h3>
 <hr/>
 <div class="episode-list">
   {#each data.rss.items as episode, index}
-  <Episode {episode} {index}></Episode>
+  <Episode {episode} index={data.rss.items.length - index}></Episode>
   {/each}
 </div>
 
