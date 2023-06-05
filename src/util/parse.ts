@@ -20,6 +20,8 @@ export default async (url: string) => {
   const raw = await fetch(url);
   const data = await raw.text();
 
+  console.log(data);
+
   const xml = new XMLParser({
     attributeNamePrefix: '',
     textNodeName: '$text',
@@ -27,6 +29,8 @@ export default async (url: string) => {
   });
 
   const result = xml.parse(data);
+
+  console.log(result);
 
   let channel = result.rss && result.rss.channel ? result.rss.channel : result.feed;
   if (Array.isArray(channel)) channel = channel[0];
