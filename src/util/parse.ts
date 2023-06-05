@@ -15,6 +15,7 @@ interface rssData {
 
 export default async (url: string) => {
   if (!/(^http(s?):\/\/[^\s$.?#].[^\s]*)/i.test(url)) return null;
+  console.log('rss fetch started');
 
   const raw = await fetch(url);
   const data = await raw.text();
@@ -43,6 +44,8 @@ export default async (url: string) => {
   if (items && !Array.isArray(items)) items = [items];
 
   for (let i = 0; i < items.length; i++) {
+    console.log(`parsing episode ${i} data`);
+
     const val = items[i];
     const media = {};
 
@@ -84,6 +87,8 @@ export default async (url: string) => {
     Object.assign(obj, { media });
     rss.items.push(obj);
   }
+
+  console.log('rss fetch completed');
 
   return rss;
 };
