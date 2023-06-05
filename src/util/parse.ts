@@ -15,7 +15,7 @@ interface rssData {
 
 export default async (url: string) => {
   if (!/(^http(s?):\/\/[^\s$.?#].[^\s]*)/i.test(url)) return null;
-  console.log('rss fetch started');
+  console.log(`rss fetch started: ${url}`);
 
   const raw = await fetch(url);
   const data = await raw.text();
