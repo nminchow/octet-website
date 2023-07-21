@@ -1,13 +1,28 @@
-body {
-  background-color: #fffdfa;
+:root {
+  --background-color: white;
+  --text-color: #222222;
+  --link-color: #0066cc;
+  --link-color--visited: 
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Playfair', serif;
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Fira Mono', serif;
 }
 
 h3 a {
-  font-family: 'Playfair', serif;
+  font-family: 'Fira Sans', serif;
 }
 
 h1 {
@@ -24,12 +39,9 @@ h2 {
   margin-bottom: .5em;
 }
 
-.episode-list h2 {
-  font-size: 1.5em;
-}
-
-p, a {
-  font-family: 'Wix Madefor Display', sans-serif;
+p,
+a {
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .play {
@@ -47,6 +59,13 @@ p, a {
   margin-right: auto;
 }
 
+.episode-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 .episode p {
   margin-bottom: 0;
 }
@@ -61,4 +80,32 @@ p, a {
 
 .episode br {
   display: none;
+}
+
+.episode__title {
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.episode__description {
+  font-family: Fira Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155.5%;
+}
+
+hr {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #2e2e2e;
+    --text-color: white;
+    --link-color: #1988f7;
+  }
 }
