@@ -1,5 +1,5 @@
 :root {
-  --background-color: white;
+  --background-color: #fffdfa;
   --text-color: #222222;
   --link-color: #0066cc;
   --link-color--visited: 
@@ -105,7 +105,7 @@ hr {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #2e2e2e;
-    --text-color: white;
+    --text-color: #fffdfa;
     --link-color: #1988f7;
   }
 }
