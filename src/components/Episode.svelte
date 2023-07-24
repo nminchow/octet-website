@@ -8,9 +8,9 @@
 
 <div class="episode">
   {#if episode}
-  <h2>{episode.title}</h2>
+  <h2 class="episode__title">{episode.title} </h2>
   <p class="play"><a href="{episode.enclosures[0].url}">▶</a></p>
-  <div class="description">
+  <div class="episode__description description">
     {@html stripAcastBlurb(episode.description, browser, 3)}
     {#if index !== null}
     <p>
@@ -20,6 +20,5 @@
     </p>
     {/if}
   </div>
-  <hr/>
   {/if}
 </div>
